@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project 4 - Decimal to Binary Converter</title>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/project4old.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+ 
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Decimal to binary converter</h1>
+        <h3 class="mb-5">
+          <em>Enter a number into the calculator:</em>
+        </h3>
+        <div class="frame1">
+		<h1 id="total">0.00</h1>
+		<br>
+		Number 1:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="txt1" size="4">
+		<br><br>
+		Number 2:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="txt2" size="4">
+		<br><br><br>
+		<input type="radio" name="calc" value="*" checked> *</input>&nbsp&nbsp <!--checked is a boolean -->
+		<input type="radio" name="calc" value="/"> /</input>&nbsp&nbsp
+		<input type="radio" name="calc" value="+"> +</input>&nbsp&nbsp
+		<input type="radio" name="calc" value="-"> -</input>
+		<br><br>
+		<button type="button" onclick="Calc();">Calculate</button>
+		<button type="button" onclick="Clear();">Clear</button>
+		</div>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>How it works</h2>
+            <p class="lead mb-5"> This application converts a user-entered decimal number into binary, for numbers up to 2.14 billion in size. I made it as a fun challenge without using any built in converting methods. </p><!-- put something here eventually -->
+              <!-- <a href="https://unsplash.com/">Unsplash</a>!</p> -->
+            <!-- <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	  <style>
+.frame1{                          <!-- take out the inline styling, move to css-->
+	margin:0 auto;
+	text-align:center;
+	height:265px;
+	width:200px;
+	border:8px solid #000;
+border-radius:5%;box-shadow: 10px 10px 30px gray;}
+#total{text-align:right;margin:4% 8%;background-color:lightgray;border:2px solid #000;
+border-radius:5%;}
+button{color:#696c70;margin:2% 1px;height:35px;width:80px;}
+button:hover{color:#000;font-weight:bold;border:2px solid #000;}
+input:hover{font-weight:bold;border:2px solid #000;}
+</style>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+         <section class="content-section bg-primary text-white">
+			<div class="container text-center">
+			<a href="https://chloebocker.github.io" class="btn btn-xl btn-light mr-4">Back to Main Site</a>
+			</div>
+		</section>
+  
+        <p class="text-muted small mb-0">Copyright &copy; Chloe Bocker 2018</p>
+
+    </footer>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/project4old.js"></script>        <!-- or use one template for all 4 projects, called project.js? -->
+  </body>
+
+</html>
