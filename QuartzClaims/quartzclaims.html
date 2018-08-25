@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Project 1 - Quartz Mining Claims Scraper and Querier </title>
+    <title>Project 1 - Yukon Quartz Claims Scraper </title>
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -24,9 +24,9 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">Quartz Mining Claims Scraper</h1>
+        <h1 class="mb-1">Yukon Quartz Claims Scraper</h1>
         <h3 class="mb-5">
-          <em>A C# application that downloads and saves Yukon public mining claims files, filters the data, and produces new tables with desired data on new and expired claims.</em>
+          <em>A C# console application that downloads latest Yukon public mineral claims files, filters the data, and produces sorted tables of new and expired claims, providing a general overview of mineral development activity in the territory. It is deployed on Azure App Services in order to run on a weekly schedule, and a summary Excel table is automatically emailed to subscribers. </em>
         </h3>
 		
 		<div class="frame1">
@@ -46,14 +46,13 @@
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>How it works</h2>
-            <p class="lead mb-5"> This program is a C# console application and utilizes three Nuget packages: NDbfReader, DocumentFormat.OpenXml, and ClosedXML.<br/><br/>
-			The program downloads a zip file from the Geomatics Yukon index of quartz mining claims, which is updated frequently.<br/>
-			The file is saved and its contents are extracted locally.<br/>
-			The DataBase File (DBF) containing the claims is converted into a DataTable object.<br/>
-			The data is filtered for three sets of information: new claims since a given date, expired claims since a given date, and upcoming expiring claims given a future date.<br/>
-			All have default parameters of 30 days.<br/>
-			An Excel workbook is produced for each of the three sets of data, containing the relevant claims.<br/>
-			
+            <p class="lead mb-5"> This C# console application is linked to an Azure web application using Azure App Services, and has a WebJob to run the program on a schedule.<br/><br/>
+			The application downloads and locally extracts a zip file from the Geomatics Yukon index of quartz mineral claims, which is frequently updated.<br/>
+			The DataBase File (DBF) containing the claims information is converted into a DataTable object.<br/>
+			The data is filtered for three sets of information: new claims since a given past date, expired claims since a given past date, and upcoming expiring claims given a future date.<br/>
+			Each given date is a parameter with a default value. A data table is created for each set of filtered data.<br/>
+			Each filtered data table is then sorted by date first, and then by claim name. An Excel worksheet is created for each data table.<br/>
+			An Excel workbook containing all worksheets is sent by email to a list of subscribers on a weekly schedule.<br/>		
 			<br/>
 			<a href="https://github.com/chloebocker/Quartz-Claims" class="btn btn-xl btn-light mr-4">View on GitHub<br/></a>
 			</p>
